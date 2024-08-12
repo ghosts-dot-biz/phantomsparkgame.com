@@ -1,0 +1,298 @@
+@font-face {
+font-family: 'Chakra';
+src: url('fonts/ChakraPetch-Medium.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Chakra';
+src: url('fonts/ChakraPetch-Bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
+}
+@font-face {
+font-family: 'Comfortaa';
+src: url('fonts/Comfortaa-Bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
+}
+@font-face {
+font-family: 'Comfortaa';
+src: url('fonts/Comfortaa-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration:solid;
+    text-decoration-line: underline;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	background-color: #1a1a1a;
+    text-align: center;
+    font-family: Comfortaa, Arial, sans-serif; /* Default sans-serif font */
+    font-weight: bold;
+    color: #FFFFFF; /* Light text color */
+}
+
+.header-image, .footer-image{
+    background-image: url('../img/header.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: bottom center;
+    height: 60vh; /* Adjust the height as needed */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.footer-image { 
+    background-image: url('../img/footer.jpg'); 
+    background-position: top center;
+}
+
+
+
+.container {
+	max-width: 900px;
+	text-align: center;
+	margin: 0 auto;
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    
+    .header-image {
+           height: 30vh; /
+    }
+}
+
+.space50 {
+    clear:both;
+        height: 50px;
+}
+.space20 {
+    clear:both;
+        height: 20px;
+}
+
+
+.logo img, .line img {
+    max-width: 450px;
+    width: 70%;
+    padding-left:15%;
+    padding-right:15%;
+    -webkit-filter: drop-shadow( 1px 1px 50px rgba(255, 267, 255, 0.3));
+    filter: drop-shadow( 1px 1px 50px rgba(255, 267, 255, 0.3));
+}
+
+.line { opacity : 0.2; }
+
+.shopbanner {
+    background-color: #2b2b2b;
+    padding: 20px;
+}
+
+.shopicon, .footericon {
+    float:center;
+    clear:none;
+    margin-left: 5px;
+    margin-right: 5px;
+    /* background-color: #00000011;
+    border-radius: 14px; */
+    display: inline-block;
+}
+
+.shopicon:hover, .footericon:hover, .lbbutton {
+    background-color: #00000055;
+    border-radius: 14px;
+}
+
+.footericon { margin-left: 25px; margin-right:25px;}
+
+.footericon img{
+    height: 100px;
+}
+
+.shopicon img {
+    height:70px;
+    width:100%;
+}
+
+
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.team ul li
+{
+    text-align: left;
+}
+
+.teamcol
+{
+    width: 49%;
+    min-width:300px;
+    display:inline-block;
+}
+
+.footericons {
+    clear:both;
+}
+
+h2 {
+    font-size:30px;
+    letter-spacing: 0.22em;
+    font-weight: 100;
+    line-height: 1.4em;
+}
+
+h3, h4 {
+    font-size:24px;
+    margin:0;
+    letter-spacing: 0.22em;
+    font-weight: 100;
+}
+
+.medalicon img {
+    height: 160px;
+}
+
+.teamtitle {
+    font-weight: 100;
+    font-size: 16px;
+    margin-bottom:10px;
+    color:#9b9898;
+}
+
+.teamname {
+    font-size: 22px;
+    margin-top:0;
+}
+
+.lbbutton { 
+    display: inline-block;
+    background-color: crimson;
+    transition: all .2s ease-in-out;
+    padding:15px;
+}
+
+.lbbutton:hover { 
+    background-color:#F7C232;
+    transform: scale(1.1);
+}
+
+.lbbutton h2 {
+    padding:60px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.lbbutton a:hover {
+    text-decoration: unset;
+    
+}
+
+.imgleft { 
+    float:left;
+    max-width: 400px;
+}
+
+.imgleft video, .imgleft img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.imgtextright {
+    float:left;
+    max-width: 400px;
+    text-align: left;
+    padding:20px;
+    padding-top:10px;
+}
+
+.imgtextright h4 {
+    padding:0;
+    margin:0;
+    font-size: 2em;
+}
+
+
+
+.imgtextright p {
+    font-weight: 100;
+    line-height: 1.4em;
+}
+
+.imgtextrow {
+    clear:both;
+}
+
+.champion {
+    width: 28%;
+    display: inline-block;
+    background-size: cover;
+    border-color: #797272;
+    border-radius: 9px;
+    border-style: solid;
+    max-width: 400px;
+    min-width: 300px;
+    border-width: 2px;
+    margin:10px;
+        transition: all .2s ease-in-out;
+
+}
+
+.champion img {
+    width:100%;
+    /* height:100%; */
+    min-width:300px;
+    max-width: 400px;
+    max-height: 800px;
+}
+
+.champion:hover {
+    transform: scale(1.1);
+}
+
+.champion h4 {
+    font-size:2em;
+    margin:0;
+    padding:0;
+}
+
+.champion h5 {
+    font-size:0.8em;
+    margin:0;
+    padding:10px;
+}
