@@ -120,7 +120,7 @@ body, html {
     display: inline-block;
 }
 
-.shopicon:hover, .footericon:hover, .lbbutton {
+.shopicon:hover, .footericon:hover, .redbutton {
     background-color: #00000055;
     border-radius: 14px;
 }
@@ -164,6 +164,7 @@ body, html {
     width: 49%;
     min-width:300px;
     display:inline-block;
+    vertical-align: top;
 }
 
 .footericons {
@@ -200,25 +201,25 @@ h3, h4 {
     margin-top:0;
 }
 
-.lbbutton { 
+.redbutton { 
     display: inline-block;
     background-color: crimson;
     transition: all .2s ease-in-out;
     padding:15px;
 }
 
-.lbbutton:hover { 
+.redbutton:hover { 
     background-color:#F7C232;
     transform: scale(1.1);
 }
 
-.lbbutton h2 {
+.redbutton h2 {
     padding:60px;
     padding-top:10px;
     padding-bottom:10px;
 }
 
-.lbbutton a:hover {
+.redbutton a:hover {
     text-decoration: unset;
     
 }
@@ -269,7 +270,8 @@ h3, h4 {
     min-width: 300px;
     border-width: 2px;
     margin:10px;
-        transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    vertical-align: top;
 
 }
 
@@ -295,4 +297,9 @@ h3, h4 {
     font-size:0.8em;
     margin:0;
     padding:10px;
+}
+
+.ostbutton {
+    margin-left: 6px;
+    margin-right: 6px;
 }
