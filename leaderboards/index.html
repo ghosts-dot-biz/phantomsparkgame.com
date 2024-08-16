@@ -11,31 +11,34 @@
 <body>
 <div class="wrapper">
 
-<div class="logo"><img src="files/logo.png"></div>
+<a href="https://phantomsparkgame.com"><div class="logo"><img src="files/logo.png"></div></a>
 
-<h3>Wishlist & Play Demo</h3>
-<a href="https://store.steampowered.com/app/1924180/Phantom_Spark/"><div class="pill-link highlighted">Steam Page</div></a>
+<a href="https://store.steampowered.com/app/1924180/Phantom_Spark/"><div class="pill-link highlighted">GET IT ON STEAM</div></a>
 <br>
-<h3>Live Leaderboards</h3>
-<a href="?track=Mass_V2_DEMO&label=Stone"><div class="pill-link">Stone</div></a>
-<a href="?track=Wings_V2_DEMO&label=Smoke"><div class="pill-link">Smoke</div></a>
-<a href="?track=Dream_V2_DEMO&label=Magma"><div class="pill-link">Magma</div></a>
-<a href="?track=total_DEMO&label=Total score"><div class="pill-link">Total score</div></a>
+<h3>Leaderboards</h3>
+<h4>Fwinti's Domain</h4>
+<div id="tracks-region1" class="tracks-region"></div>
+<h4>Zyn's Domain</h4>
+<div id="tracks-region2" class="tracks-region"></div>
+<h4>Aaroon's Domain</h4>
+<div id="tracks-region3" class="tracks-region"></div>
+<div id="tracks-region0"></div>
 
 
-<br>
+
+<!-- <br>
 <h3>Steam Next Fest (Archive)</h3>
 <a href="?track=Mass_V2_DEMO&label=Stone&snf=1"><div class="pill-link">Stone</div></a>
 <a href="?track=Wings_V2_DEMO&label=Smoke&snf=1"><div class="pill-link">Smoke</div></a>
 <a href="?track=Dream_V2_DEMO&label=Magma&snf=1"><div class="pill-link">Magma</div></a>
 <a href="?track=total_DEMO&label=Total score&snf=1"><div class="pill-link">Total score</div></a>
-<br>
+<br> -->
 
 <br><br>
-
-<div id="snfbanner" class="banner"><img src="files/NextFestJune2024Banner.jpg"></div>
+<!-- <div id="snfbanner" class="banner"><img src="files/NextFestJune2024Banner.jpg"></div> -->
 <br><br>
 <h2 id="table-title"></h2>
+<h4 id="table-subtitle"></h4>
 
 
 <div class="content">
@@ -48,6 +51,72 @@
 
 
 <script>
+
+    const links = [
+        { id: 'P1.1', label: 'Stone', param: 'Mass_V2', region: '1' },
+        { id: 'P1.2', label: 'Ash', param: 'Frontier_V2', region: '1' },
+        { id: 'P1.3', label: 'Heat', param: 'Mass_V2', region: '1' },
+        { id: 'P1.4', label: 'Smoke', param: 'Wings_V2', region: '1' },
+        { id: 'P1.5', label: 'Fire', param: 'Resin_V2', region: '1' },
+        { id: 'P1.6', label: 'Fissure', param: 'Blockade_V2', region: '1' },
+        { id: 'P1.7', label: 'Crater', param: 'Exposure_V2', region: '1' },
+        { id: 'P1.8', label: 'Dust', param: 'Optic_V2', region: '1' },
+        { id: 'P1.9', label: 'Ridge', param: 'Destiny_V2', region: '1' },
+        { id: 'P1.10', label: 'Magma', param: 'Dream_V2', region: '1' },
+        { id: 'E1.11', label: 'Destiny', param: 'Fire_V3', region: '1' },
+
+        { id: 'P2.1', label: 'Rain', param: 'Verticon_V2', region: '2' },
+        { id: 'P2.2', label: 'Flood', param: 'Bubble_V2', region: '2' },
+        { id: 'P2.3', label: 'Stream', param: 'Solar_V2', region: '2' },
+        { id: 'P2.4', label: 'Wave', param: 'Parapet_V4', region: '2' },
+        { id: 'P2.5', label: 'Cascade', param: 'Dagger_V2', region: '2' },
+        { id: 'P2.6', label: 'Tide', param: 'Cloud2_V2', region: '2' },
+        { id: 'P2.7', label: 'Gale', param: 'Leaf_V2', region: '2' },
+        { id: 'P2.8', label: 'Storm', param: 'Lemon_V2', region: '2' },
+        { id: 'P2.9', label: 'Mist', param: 'Squid_V3', region: '2' },
+        { id: 'P2.10', label: 'Thunder', param: 'Gale_V2', region: '2' },
+        { id: 'E2.11', label: 'Valor', param: 'Rampart_V3', region: '2' },
+
+
+        { id: 'P3.1', label: 'Sky', param: 'Dust1_V2', region: '3' },
+        { id: 'P3.2', label: 'Moon', param: 'Swift1_V2', region: '3' },
+        { id: 'P3.3', label: 'Eclipse', param: 'Alkaline_V3', region: '3' },
+        { id: 'P3.4', label: 'Sun', param: 'Orb_V3', region: '3' },
+        { id: 'P3.5', label: 'Aura', param: 'Rust_V2', region: '3' },
+        { id: 'P3.6', label: 'Beam', param: 'Temple_V2', region: '3' },
+        { id: 'P3.7', label: 'Cloud', param: 'Damage_V4', region: '3' },
+        { id: 'P3.8', label: 'Horizon', param: 'Storm_V2', region: '3' },
+        { id: 'P3.9', label: 'Dusk', param: 'Dark_V4', region: '3' },
+        { id: 'P3.10', label: 'Dawn', param: 'Lunar_V3', region: '3' },
+        { id: 'E3.11', label: 'Serenity', param: 'Colossus_V4', region: '3' },
+
+        // { id: 'TOTAL', label: 'Total time', param: 'total', region: '0' },
+
+    ];
+                
+
+
+    function createLinkList() {
+        
+
+        for (let i = 0; i < links.length; i += 1) {
+
+            
+            const link = links[i];
+            const listItem = document.createElement('span');
+
+            //<a href="?id=1.2"><div class="pill-link">Magma</div></a>
+            let html = "<a href='?id=" + links[i].id + "'><div class='pill-link'>" + link.id + " " + link.label + "</div></a>&emsp;";
+
+            listItem.innerHTML = html;
+
+            let linkList = document.getElementById('tracks-region' + link.region);
+
+            linkList.appendChild(listItem);
+        }
+    }
+    createLinkList();
+
     async function displayCSV(url) {
         try {
             const response = await fetch(url);
@@ -114,32 +183,24 @@
 
     const urlParams = new URLSearchParams(window.location.search);
     
-    let trackParam = urlParams.get('track');
-    let labelParam = urlParams.get('label');
-    let snfParam = urlParams.get('snf') >= 1;
+    let idParam = urlParams.get('id');
 
-    if(trackParam == null) // auto select first
-    {
-        trackParam = "Mass_V2_DEMO";
-        labelParam = "STONE";
-    }
+    if(!idParam) idParam = "P1.1";
 
-    document.getElementById("table-title").innerHTML = labelParam;
+    let link = links.find(link => link.id === idParam);
+    document.getElementById("table-title").innerHTML = link.label;
+    document.getElementById("table-subtitle").innerHTML = "PATHWAY " + link.id;
 
-    const csvURL_snf = "snf/" + trackParam;
-    const csvURL_live = "https://gliderushfunctions.blob.core.windows.net/webview/" + trackParam;
-
-    let csvURL = (snfParam ? csvURL_snf : csvURL_live);
+    let csvURL = "https://gliderushfunctions.blob.core.windows.net/webview/" + link.param;
 
     // Display the CSV as HTML table
     displayCSV(csvURL);
 
-    if(snfParam) 
-        document.getElementById("snfbanner").style.display = "block";
-
-
+    
     const bgImgs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13,14,15,16,17,18];
     let number = bgImgs[Math.floor(Math.random() * bgImgs.length)];
     document.body.style.backgroundImage = "url('files/bg"+ number + ".jpeg')";
+
+    
 
 </script>

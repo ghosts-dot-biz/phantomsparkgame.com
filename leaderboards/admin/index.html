@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phantom Spark Leaderboards</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../files/style.css">
 </head>
 
 <body>
@@ -94,7 +94,7 @@
                             html += `<td>${formattedTime}</td>`;
                         }
                         else if (j === 2) {
-                            html += `<td><img class="flag" src="../flags/${cells[j].toLowerCase()}.png" /></td>`;
+                            html += `<td><img width="20px" class="flag" src="../flags/${cells[j].toLowerCase()}.png" /></td>`;
                         }
                         else {
                             html += `<td>${cells[j]}</td>`;
@@ -121,9 +121,7 @@
                 const link = links[i];
 
                 const listItem = document.createElement('li');
-                let html = "<a href='?track=" + links[i].param + "&label=" + link.label + "'>" + link.label + "</a>&emsp;";
-                if(i < links.length - 1)
-                    html += "<a href='?track=" + links[i].param + "_admin&label=" + link.label + "'>(admin)</a>&emsp;";
+                let html = "<a href='?id=" + links[i].id + "&label=" + link.label + "'>" + link.label + "</a>&emsp;";
 
                 listItem.innerHTML = html;
                 linkList.appendChild(listItem);
