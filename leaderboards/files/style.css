@@ -157,3 +157,15 @@ margin-top:10px;
     margin: 0 auto;
     width: 80%;
 }
+
+
+#link-list a {
+ 
+    color:white;
+    text-align: left;
+}
+
+#link-list {
+
+    text-align: left;
+}
