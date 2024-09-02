@@ -132,7 +132,7 @@ body, html {
 }
 
 .shopicon img {
-    height:70px;
+    max-height:70px;
     width:100%;
 }
 
