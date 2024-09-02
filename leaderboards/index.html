@@ -124,7 +124,7 @@
 
         { id: 'DAREDROP', label: 'Serenity', param: 'Colossus_V4_DAREDROP', region: '3' },
 
-        // { id: 'TOTAL', label: 'Total time', param: 'total', region: '0' },
+        { id: 'TOTAL', label: 'Total time', param: 'total', region: '0' },
 
     ];
                 
@@ -191,7 +191,8 @@
                         html += `${formattedTime}`;
                     }
                     else if (j === 2) {
-                        html += `<img title="flag-${cells[j].toLowerCase()}" alt="flag-${cells[j].toLowerCase()}" class="flag" src="flags/${cells[j].toLowerCase()}.png" />`;
+                        let flagName = cells[j].toLowerCase().trim();
+                        html += `<img title="flag-${flagName}" alt="flag-${flagName}" class="flag" src="flags/${flagName}.png" />`;
                     }
                     else {
                         html += `${cells[j]}`;
