@@ -127,6 +127,8 @@ margin-top:10px;
 .highlighted {
     background-color: #fff4d4;
     color: #333;
+    margin-left:5px;
+    margin-right:5px;
 }
 
 .updated {
@@ -168,4 +170,13 @@ margin-top:10px;
 #link-list {
 
     text-align: left;
+}
+
+.report {
+    font-weight: 100;
+    text-align: right;
+    opacity:0.6;
+}
+.report a {
+    color: orange;
 }
