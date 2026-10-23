@@ -11,7 +11,7 @@
 <body>
 <!-- <div class="wrapper"> -->
 
-<a href="https://phantomsparkgame.com"><div class="logo"><img src="files/logo.png"></div></a>
+<a href="https://phantomsparkgame.com"><div class="logo"><img src="../files/logo.png"></div></a>
 
 <a href="https://store.steampowered.com/app/1924180/Phantom_Spark/"><div class="pill-link highlighted">GET IT ON STEAM</div></a>
 <br>
@@ -55,7 +55,7 @@
     const links = [
         { id: 'P1.1', label: 'Stone', param: 'Mass_V2', region: '1' },
         { id: 'P1.2', label: 'Ash', param: 'Frontier_V2', region: '1' },
-        { id: 'P1.3', label: 'Heat', param: 'Mass_V2', region: '1' },
+        { id: 'P1.3', label: 'Heat', param: 'Iguana_V2', region: '1' },
         { id: 'P1.4', label: 'Smoke', param: 'Wings_V2', region: '1' },
         { id: 'P1.5', label: 'Fire', param: 'Resin_V2', region: '1' },
         { id: 'P1.6', label: 'Fissure', param: 'Blockade_V2', region: '1' },
@@ -67,7 +67,7 @@
 
         { id: 'P2.1', label: 'Rain', param: 'Verticon_V2', region: '2' },
         { id: 'P2.2', label: 'Flood', param: 'Bubble_V2', region: '2' },
-        { id: 'P2.3', label: 'Stream', param: 'Solar_V2', region: '2' },
+        { id: 'P2.3', label: 'Stream', param: 'Solar_V3', region: '2' },
         { id: 'P2.4', label: 'Wave', param: 'Parapet_V4', region: '2' },
         { id: 'P2.5', label: 'Cascade', param: 'Dagger_V2', region: '2' },
         { id: 'P2.6', label: 'Tide', param: 'Cloud2_V2', region: '2' },
@@ -89,6 +89,8 @@
         { id: 'P3.9', label: 'Dusk', param: 'Dark_V4', region: '3' },
         { id: 'P3.10', label: 'Dawn', param: 'Lunar_V3', region: '3' },
         { id: 'E3.11', label: 'Serenity', param: 'Colossus_V4', region: '3' },
+
+        { id: 'E3.11DD', label: 'Serenity (DAREDROP)', param: 'Colossus_V4_DAREDROP', region: '3' },
 
         // { id: 'TOTAL', label: 'Total time', param: 'total', region: '0' },
 
@@ -157,7 +159,7 @@
                         html += `${formattedTime}`;
                     }
                     else if (j === 2) {
-                        html += `<img class="flag" src="../flags/${cells[j].toLowerCase()}.png" />`;
+                        html += `<img title="flag-${cells[j].toLowerCase()}" alt="flag-${cells[j].toLowerCase()}" class="flag" src="../flags/${cells[j].toLowerCase()}.png" />`;
                     }
                     else {
                         html += `${cells[j]}`;

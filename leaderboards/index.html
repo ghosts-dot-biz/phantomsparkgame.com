@@ -2,10 +2,41 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phantom Spark Leaderboards</title>
-<link rel="stylesheet" href="files/style.css">
+
+<base target="_blank">
+<meta charset="utf-8">
+<title>PHANTOM SPARK - LEADERBOARDS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://www.phantomsparkgame.com">
+<meta property="og:site_name" content="PHANTOM SPARK">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phantomsparkgame.com/">
+<meta property="og:title" content="PHANTOM SPARK - precision time trial racing">
+<meta property="og:image" content="https://phantomsparkgame.com/img/bannersmall.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:description" content="Engage in precision time-trial racing to best the champions in the single-player campaign, challenge your friends in split-screen local multiplayer, or make your mark on the global online leaderboards.">
+<meta itemprop="name" content="PHANTOM SPARK">
+<meta itemprop="url" content="https://www.phantomsparkgame.com">
+<meta itemprop="description" content="Engage in precision time-trial racing to best the champions in the single-player campaign, challenge your friends in split-screen local multiplayer, or make your mark on the global online leaderboards.">
+<meta itemprop="thumbnailUrl" content="https://phantomsparkgame.com/img/bannersmall.png">
+<link rel="image_src" href="https://phantomsparkgame.com/img/bannersmall.png">
+<meta name="description" content="Engage in precision time-trial racing to best the champions in the single-player campaign, challenge your friends in split-screen local multiplayer, or make your mark on the global online leaderboards.">
+<meta name="author" content="GHOSTS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@_phantomspark">
+<meta name="twitter:title" content="PHANTOM SPARK - precision time trial racing">
+<meta name="twitter:description" content="Engage in precision time-trial racing to best the champions in the single-player campaign, challenge your friends in split-screen local multiplayer, or make your mark on the global online leaderboards">
+<meta name="twitter:image" content="https://phantomsparkgame.com/img/bannersmall.png">
+<meta name="x:card" content="summary">
+<meta name="x:site" content="@_phantomspark">
+<meta name="x:title" content="PHANTOM SPARK - precision time trial racing">
+<meta name="x:description" content="Engage in precision time-trial racing to best the champions in the single-player campaign, challenge your friends in split-screen local multiplayer, or make your mark on the global online leaderboards">
+<meta name="x:image" content="https://phantomsparkgame.com/img/bannersmall.png">
+
+<link rel="stylesheet" href="files/style.css?v3">
+<link rel="icon" type="image/png" href="../favicon.png">
+
 </head>
 
 <body>
@@ -13,7 +44,10 @@
 
 <a href="https://phantomsparkgame.com"><div class="logo"><img src="files/logo.png"></div></a>
 
-<a href="https://store.steampowered.com/app/1924180/Phantom_Spark/"><div class="pill-link highlighted">GET IT ON STEAM</div></a>
+<a href="https://phantomsparkgame.com/"><div class="pill-link highlighted">HOMEPAGE</div></a>  
+<a href="https://discord.gg/Coatsink/"><div class="pill-link highlighted">JOIN DISCORD</div></a>  
+<a href="https://store.steampowered.com/app/1924180/Phantom_Spark/"><div class="pill-link highlighted">STEAM PAGE</div></a>
+
 <br>
 <h3>Leaderboards</h3>
 <h4>Fwinti's Domain</h4>
@@ -44,6 +78,8 @@
 <div class="content">
 <div id="table-container"></div>
 
+<div class="report"><p><i>See something suspicious? Tell us on <a href="https://discord.gg/Coatsink">discord</a>.</i></p></div>
+
 </div>
 </div>
 </body>
@@ -55,7 +91,7 @@
     const links = [
         { id: 'P1.1', label: 'Stone', param: 'Mass_V2', region: '1' },
         { id: 'P1.2', label: 'Ash', param: 'Frontier_V2', region: '1' },
-        { id: 'P1.3', label: 'Heat', param: 'Mass_V2', region: '1' },
+        { id: 'P1.3', label: 'Heat', param: 'Iguana_V2', region: '1' },
         { id: 'P1.4', label: 'Smoke', param: 'Wings_V2', region: '1' },
         { id: 'P1.5', label: 'Fire', param: 'Resin_V2', region: '1' },
         { id: 'P1.6', label: 'Fissure', param: 'Blockade_V2', region: '1' },
@@ -67,7 +103,7 @@
 
         { id: 'P2.1', label: 'Rain', param: 'Verticon_V2', region: '2' },
         { id: 'P2.2', label: 'Flood', param: 'Bubble_V2', region: '2' },
-        { id: 'P2.3', label: 'Stream', param: 'Solar_V2', region: '2' },
+        { id: 'P2.3', label: 'Stream', param: 'Solar_V3', region: '2' },
         { id: 'P2.4', label: 'Wave', param: 'Parapet_V4', region: '2' },
         { id: 'P2.5', label: 'Cascade', param: 'Dagger_V2', region: '2' },
         { id: 'P2.6', label: 'Tide', param: 'Cloud2_V2', region: '2' },
@@ -90,7 +126,9 @@
         { id: 'P3.10', label: 'Dawn', param: 'Lunar_V3', region: '3' },
         { id: 'E3.11', label: 'Serenity', param: 'Colossus_V4', region: '3' },
 
-        // { id: 'TOTAL', label: 'Total time', param: 'total', region: '0' },
+        { id: 'DAREDROP', label: 'Serenity', param: 'Colossus_V4_DAREDROP', region: '3' },
+
+        { id: 'TOTAL', label: 'time', param: 'total', region: '0' },
 
     ];
                 
@@ -157,7 +195,8 @@
                         html += `${formattedTime}`;
                     }
                     else if (j === 2) {
-                        html += `<img class="flag" src="flags/${cells[j].toLowerCase()}.png" />`;
+                        let flagName = cells[j].toLowerCase().trim();
+                        html += `<img title="flag-${flagName}" alt="flag-${flagName}" class="flag" src="flags/${flagName}.png" />`;
                     }
                     else {
                         html += `${cells[j]}`;
